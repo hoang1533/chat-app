@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.opt-container {
+    @apply flex justify-between gap-2;
+}
+
+.opt-container input {
+    @apply !mr-0 flex-1 py-5 outline-none;
+}
+
+/* custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* live video */
+/* Add custom CSS for Messenger-like UI */
+.card {
+    padding: 20px;
+    background-color: #f0f2f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.error-msg {
+    color: red;
+}
+
+#remoteVideoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.remote-video-container {
+    position: relative;
+    width: 30vw;
+    aspect-ratio: 16/9;
+    max-width: 320px;
+    min-width: 240px;
+    overflow: hidden;
+}
+
+#localVideo {
+    width: 50vw;
+    aspect-ratio: 16/9;
+    max-width: 480px;
+    min-width: 360px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    margin: 0;
+}
+
+#controlsToolbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#mediaControls button {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #f0f2f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#mediaControls button.active {
+    background-color: #0084ff;
+    color: #fff;
+    border-color: #0084ff;
+}
+
+#endConnection {
+    padding: 10px 20px;
+    background-color: #ff3b30;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+#endConnection:hover {
+    background-color: #cc2d23;
+}
